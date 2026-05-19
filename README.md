@@ -26,7 +26,7 @@ walk one tile at a time; every move is a full slide. Now find your way
 from the **igloo** to the **castle** in as few moves as possible.
 
 That's the puzzle. The twist of this project is that **you don't solve it
-- you watch the computer solve it.** Press *Start* and an artificial
+you watch the computer solve it.** Press *Start* and an artificial
 intelligence search algorithm called **A\*** ("A-star") plans the
 shortest possible route and the player glides along it, the ice lighting
 up tile by tile to reveal the path.
