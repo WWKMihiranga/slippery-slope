@@ -1,6 +1,6 @@
-# Sliding Puzzle Pathfinder — Algorithmic Report
+# Sliding Puzzle Pathfinder - Algorithmic Report
 
-**Module:** 5SENG003W Algorithms — Coursework (Task 5)
+**Module:** 5SENG003W Algorithms - Coursework (Task 5)
 
 ---
 
@@ -13,7 +13,7 @@ from the input file by the parser. On top of this raw array the program
 builds a **slide graph**, which is the structure the search actually runs
 on:
 
-- **Nodes** are the squares the player can come to rest on — the start,
+- **Nodes** are the squares the player can come to rest on - the start,
   the finish, and every square reached by sliding until a rock or wall
   is hit.
 - **Edges** are slides. From any node, the four cardinal directions are
@@ -22,7 +22,7 @@ on:
 
 This satisfies the coursework's abstraction principles: it builds on the
 language's native array type, it represents any map of the given format,
-and it fits the problem — because the puzzle minimises the number of
+and it fits the problem - because the puzzle minimises the number of
 *moves*, every edge is given a uniform cost of 1, regardless of how many
 tiles the slide crosses.
 
@@ -40,7 +40,7 @@ breadth-first search and Dijkstra's algorithm because:
 - A\* expands far fewer nodes than uninformed search when a good
   heuristic is available, while still guaranteeing an optimal result.
 
-**Heuristic.** A\* needs an *admissible* heuristic — one that never
+**Heuristic.** A\* needs an *admissible* heuristic - one that never
 overestimates the true remaining cost. A single slide can cross at most
 `max(width, height) − 1` tiles. Therefore the number of moves still
 needed from a square to the finish is at least:
@@ -90,7 +90,7 @@ both 1-based.
 ```
 
 This is a **15-move** solution. The walkthrough in the coursework brief
-uses 17 moves; A\* finds a strictly shorter route, which is expected —
+uses 17 moves; A\* finds a strictly shorter route, which is expected -
 the brief presents *a* valid path, while A\* with an admissible
 heuristic is guaranteed to return an *optimal* one. Each step can be
 checked independently: every slide ends exactly where the next rock or
@@ -143,13 +143,13 @@ per step (0.166/0.036 ≈ 4.6, 1.333/0.166 ≈ 8.0, 5.401/1.333 ≈ 4.1). A
 ratio near 4 corresponds to growth that is **linear in the cell count**;
 the slightly higher ratios reflect the `√C · log C` factors in the
 theoretical bound and the growth in nodes expanded. Nodes expanded grow
-in step with the time, confirming that search effort — not constant
-overhead — drives the cost.
+in step with the time, confirming that search effort - not constant
+overhead - drives the cost.
 
 ### Order-of-growth classification
 
 - **Worst case:** `O(C · √C · log C)` in the number of cells `C`.
-- **Observed (typical maps):** close to `O(C)` — near-linear in the
+- **Observed (typical maps):** close to `O(C)` - near-linear in the
   number of cells, thanks to the admissible heuristic keeping the
   explored frontier small.
 
@@ -164,5 +164,5 @@ animation frame.
 The program represents the puzzle as a slide graph built on a plain 2-D
 array, and solves it with A\* using an admissible
 Manhattan/longest-slide heuristic. This guarantees a shortest path,
-expands few nodes in practice, and scales near-linearly with map size —
+expands few nodes in practice, and scales near-linearly with map size -
 a correct and efficient solution to the coursework problem.
