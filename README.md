@@ -96,7 +96,7 @@ boulders** stop your slide, and the pale blue tiles are the ice.
 
 ```bash
 # 1. Get the code
-git clone https://github.com/YOUR_USERNAME/sliding-puzzle-pathfinder.git
+git clone https://github.com/WWKMihiranga/sliding-puzzle-pathfinder.git
 cd sliding-puzzle-pathfinder
 
 # 2. Install the one dependency
