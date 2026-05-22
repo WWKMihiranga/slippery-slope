@@ -96,8 +96,8 @@ boulders** stop your slide, and the pale blue tiles are the ice.
 
 ```bash
 # 1. Get the code
-git clone https://github.com/WWKMihiranga/sliding-puzzle-pathfinder.git
-cd sliding-puzzle-pathfinder
+git clone https://github.com/WWKMihiranga/slippery-slope.git
+cd slippery-slope
 
 # 2. Install the one dependency
 python -m pip install pygame
@@ -200,15 +200,6 @@ visually with the in-game **Editor**.
 - **[Pygame](https://www.pygame.org/)** - rendering, input and audio
 - **A\* search** - the shortest-path algorithm at the heart of it
 - Custom easing functions for animation - no heavy dependencies
-
----
-
-## 🗺️ Roadmap
-
-- [ ] Sound effects (slide *whoosh*, victory chime)
-- [ ] A title screen and level-select
-- [ ] Move counter & "best solve" tracking
-- [ ] An online solver demo anyone can try in a browser
 
 ---
 
